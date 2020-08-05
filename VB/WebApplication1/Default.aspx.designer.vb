@@ -10,60 +10,60 @@
 Namespace WebApplication1
 
 
-    Partial Public Class [Default]
+	Partial Public Class [Default]
 
-        ''' <summary>
-        ''' form1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+		''' <summary>
+		''' form1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
-        ''' <summary>
-        ''' hdCopiedAppointmentID control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected hdCopiedAppointmentID As Global.System.Web.UI.WebControls.HiddenField
+		''' <summary>
+		''' hdCopiedAppointmentID control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected hdCopiedAppointmentID As Global.System.Web.UI.WebControls.HiddenField
 
-        ''' <summary>
-        ''' ASPxScheduler1 control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ASPxScheduler1 As Global.DevExpress.Web.ASPxScheduler.ASPxScheduler
+		''' <summary>
+		''' ASPxScheduler1 control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ASPxScheduler1 As Global.DevExpress.Web.ASPxScheduler.ASPxScheduler
 
-        ''' <summary>
-        ''' ButtonPostBack control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ButtonPostBack As Global.System.Web.UI.WebControls.Button
+		''' <summary>
+		''' ButtonPostBack control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ButtonPostBack As Global.System.Web.UI.WebControls.Button
 
-        ''' <summary>
-        ''' ObjectDataSourceResources control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ObjectDataSourceResources As Global.System.Web.UI.WebControls.ObjectDataSource
+		''' <summary>
+		''' ObjectDataSourceResources control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ObjectDataSourceResources As Global.System.Web.UI.WebControls.ObjectDataSource
 
-        ''' <summary>
-        ''' ObjectDataSourceAppointment control.
-        ''' </summary>
-        ''' <remarks>
-        ''' Auto-generated field.
-        ''' To modify move field declaration from designer file to code-behind file.
-        ''' </remarks>
-        Protected ObjectDataSourceAppointment As Global.System.Web.UI.WebControls.ObjectDataSource
-    End Class
+		''' <summary>
+		''' ObjectDataSourceAppointment control.
+		''' </summary>
+		''' <remarks>
+		''' Auto-generated field.
+		''' To modify move field declaration from designer file to code-behind file.
+		''' </remarks>
+		Protected ObjectDataSourceAppointment As Global.System.Web.UI.WebControls.ObjectDataSource
+	End Class
 End Namespace

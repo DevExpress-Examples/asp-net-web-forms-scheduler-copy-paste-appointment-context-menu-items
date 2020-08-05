@@ -1,7 +1,7 @@
-﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="WebApplication1.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApplication1.Default" %>
 
-<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler" TagPrefix="dxwschs" %>
-<%@ Register Assembly="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraScheduler" TagPrefix="cc1" %>
+<%@ Register Assembly="DevExpress.Web.ASPxScheduler.v18.1, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxScheduler" TagPrefix="dxwschs" %>
+<%@ Register Assembly="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.XtraScheduler" TagPrefix="cc1" %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,6 @@
 <body>
     <script lang="cs">
         function OnClientPopupMenuShowing(s, e) {
-            // 1st approach
             for (menuItemId in e.item.items) {
                 if (e.item.items[menuItemId].name == "PasteAppointment") {
                     e.item.items[menuItemId].SetEnabled(document.getElementById("hdCopiedAppointmentID").value != '');
@@ -20,23 +19,15 @@
             }
         }
 
-        function OnClientItemClick(s, e) {
-            if (e.item.name.indexOf("CopyAppointment") != -1) {
+        function onMenuItemClicked(s, e) {
+            if (e.itemName.indexOf("CopyAppointment") != -1) {
                 var selectedIds = ClientScheduler.GetSelectedAppointmentIds();
                 if (selectedIds.length > 0) {
                     document.getElementById("hdCopiedAppointmentID").value = selectedIds[0];
                 }
             }
-            else if (e.item.name.indexOf("PasteAppointment") != -1) {
-                ClientScheduler.PerformCallback(e.item.name);
-            }
-            else {
-                if (s.cpMenuName == "AppointmentMenu") {
-                    ASPx.SchedulerOnAptMenuClick(s, e);
-                }
-                else {
-                    ASPx.SchedulerOnViewMenuClick(s, e);
-                }
+            else if (e.itemName.indexOf("PasteAppointment") != -1) {
+                ClientScheduler.PerformCallback(e.itemName);
             }
         }
 
@@ -51,9 +42,9 @@
         <div>
             <asp:HiddenField ID="hdCopiedAppointmentID" runat="server" />
             <dxwschs:ASPxScheduler ID="ASPxScheduler1" runat="server" AppointmentDataSourceID="ObjectDataSourceAppointment"
-                ClientIDMode="AutoID" Start="2013-10-30" GroupType="Date" OnPopupMenuShowing="ASPxScheduler1_PopupMenuShowing" OnCustomCallback="ASPxScheduler1_CustomCallback"
+                ClientIDMode="AutoID" GroupType="Date" OnPopupMenuShowing="ASPxScheduler1_PopupMenuShowing" OnCustomCallback="ASPxScheduler1_CustomCallback"
                 ResourceDataSourceID="ObjectDataSourceResources" ClientInstanceName="ClientScheduler">
-                <ClientSideEvents EndCallback ="OnClientEndCallback" />
+                <ClientSideEvents EndCallback ="OnClientEndCallback" MenuItemClicked="onMenuItemClicked" />
                 <Storage>
                     <Appointments AutoRetrieveId="True">
                         <Mappings
