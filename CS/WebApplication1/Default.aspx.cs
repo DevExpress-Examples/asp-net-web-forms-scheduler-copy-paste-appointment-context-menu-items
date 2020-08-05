@@ -71,9 +71,7 @@ namespace WebApplication1 {
         }
 
         protected void ASPxScheduler1_PopupMenuShowing(object sender, DevExpress.Web.ASPxScheduler.PopupMenuShowingEventArgs e) {
-            e.Menu.ClientInstanceName = "AppointmentPopupMenu";
             e.Menu.ClientSideEvents.PopUp = "OnClientPopupMenuShowing";
-            e.Menu.ClientSideEvents.ItemClick = "OnClientItemClick";
 
             if(e.Menu.MenuId == DevExpress.XtraScheduler.SchedulerMenuItemId.AppointmentMenu) {
                 DevExpress.Web.MenuItem newItemCopy = new DevExpress.Web.MenuItem();
