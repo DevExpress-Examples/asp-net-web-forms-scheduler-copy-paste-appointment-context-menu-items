@@ -10,6 +10,7 @@
 <!-- run online end -->
 
 This example demonstrates how to implement the copy and paste appointment operations via an appointment context menu. 
+
 ![](scheduler-context-menu.png)
 
 ## Implementation Details
