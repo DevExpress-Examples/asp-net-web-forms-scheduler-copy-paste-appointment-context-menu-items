@@ -39,7 +39,7 @@ This example demonstrates how to implement the copy and paste appointment operat
     }
     ```
 
-2. The context menu's [PopUp](https://docs.devexpress.com/AspNet/DevExpress.Web.MenuClientSideEvents.PopUp) event handler disables **Paste** command when there is no copied appointment.
+2. The context menu's [PopUp](https://docs.devexpress.com/AspNet/DevExpress.Web.MenuClientSideEvents.PopUp) event handler disables the **Paste** command when there is no copied appointment.
 
     ```jscript
     function OnClientPopupMenuShowing(s, e) {
@@ -51,7 +51,7 @@ This example demonstrates how to implement the copy and paste appointment operat
     }
     ```
 
-3. When a user clicks the **Copy** command, the ID of the currently selected appointment is saved to `HiddedField`.
+3. When a user clicks the **Copy** command, the ID of the currently selected appointment is saved to `HiddenField`.
 
     ```jscript
     function onMenuItemClicked(s, e) {
