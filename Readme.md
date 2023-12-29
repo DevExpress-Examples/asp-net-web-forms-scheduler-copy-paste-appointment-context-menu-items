@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Scheduler for ASP.NET Web Forms - How to implement Copy and Paste context menu items for appointments
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128547183/)**
-<!-- run online end -->
 
 This example demonstrates how to implement the copy and paste appointment operations via an appointment context menu. 
 
